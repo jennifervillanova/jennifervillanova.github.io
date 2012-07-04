@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Slab'), local('JosefinSlab'), url('http://themes.googleusercontent.com/static/fonts/josefinslab/v3/46aYWdgz-1oFX11flmyEfXhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+
+body {
+    background-image: url('pattern.png'),url('fundo.jpg');
+	background-color: transparent;
+    background-repeat: repeat, no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    background-size: auto, cover;
+	font-family: 'Josefin Slab', Arial, sans-serif;
+}
+
+img {
+    max-width: none;
+}
+
+.header{
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+	font-family:'Arial Narrow', Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	background: #000;
+    color: #ddd;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+
+.header span {
+    margin-left: 30px;
+}
+
+h1{
+	text-shadow: 0px 0px 2px #fff;
+	margin:0px;
+	padding:20px;
+	font-size:58px;
+	color:#000;
+	text-align:left;
+	font-weight:bold;
+    text-align:left;
+}
+
+h1 span{
+	text-shadow: 0px 0px 3px black;
+	font-size:22px;
+	color:#ddd;
+	padding-top:10px;
+}
+
+#gallery {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 65px;
+	width: 100%;
+}
+
+#gallery .album {
+    margin-top: 90px;
+	position: absolute;
+	width: 200px;
+	height: 65px;
+}
+
+#gallery .button, #back-button {
+	font-family:'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    width: 160px;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px #000;
+    -moz-box-shadow: 1px 1px 10px #000;
+    -webkit-box-shadow: 1px 1px 10px #000;
+    box-shadow: 1px 1px 10px #000;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    letter-spacing: 1px;
+}
+
+#gallery .album .content {
+	position: absolute;
+	top: 0px;
+	height: 155px;
+	cursor: pointer;
+}
+
+#gallery .album .content img {
+	border:5px solid #fff;
+	-moz-box-shadow:1px 1px 7px #000;
+	-webkit-box-shadow:1px 1px 7px #000;
+	box-shadow:1px 1px 7px #000;
+}
+
+#gallery .preview {
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    visibility: hidden;
+}
+
+#gallery .preview img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 10px solid #fff;
+    border-bottom: 45px solid #fff;
+    -moz-box-shadow: 1px 1px 7px #000;
+    -webkit-box-shadow: 1px 1px 7px #000;
+    box-shadow: 1px 1px 7px #000;
+}
+
+#gallery .preview .title {
+    bottom: 0;
+    color: #00021C;
+    font-size: 20px;
+    height: 45px;
+    left: 0;
+    line-height: 45px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#back-button {
+    text-transform: uppercase;
+    bottom: 180px;
+    left: -100px;
+    width: 80px;
+}
+
+#spinner {
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin:-35px 0px 0px -35px;
+    background:#fff url(loader.gif) no-repeat center center;
+    width:70px;
+    height:70px;
+    z-index:999;
+    opacity:0.7;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}

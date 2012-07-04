@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+  <head>
+    <meta name="title" content="Jennifer Villanova - Fotografia"/>
+    <meta name="description" content=""/>
+    <link rel="image_src" href="http://www.jennifervillanova.com/thumb.jpg"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Jennifer Villanova - Fotografia</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.transform-0.8.0.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <script type="text/javascript" src="backbone-min.js"></script>
+    <script type="text/javascript" src="Models.js"></script>
+    <script type="text/javascript" src="Views.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32833486-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <strong>Email:</strong> contato@jennifervillanova.com
+      <span class="right">
+        <strong>Fone:</strong> (53) 91365478
+      </span>
+    </div>
+    <h1>Jennifer Villanova <span>fotografia</span></h1>
+
+    <div id="spinner"></div>
+
+    <script type="text/template" id="gallery-template">
+      <div id="back-button">Voltar</div>
+    </script>
+
+    <script type="text/template" id="album-template">
+      <div class="title button"></div>
+    </script>
+    <script type="text/template" id="photo-template">
+      <div class="title"><span><%= title %></span></div>
+    </script>
+  </body>
+</html>
