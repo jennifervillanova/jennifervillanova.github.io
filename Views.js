@@ -74,16 +74,22 @@ var PhotoCollectionView = Backbone.View.extend({
         Gallery.events.on('show-gallery', function() {
             if (this.currentPhoto) this.currentPhoto.hide();
 
-            $(this.el).animate({ marginTop: '0px' }, 500);
+	    var that = this;
+
+            $(this.el).animate({ marginTop: '0px' }, 500, function() {
+		that.disableMouseAnimations = false;
+	    });
+
             $('#back-button').stop().animate({ left: '-150px'}, 300);
 
-            var that = this;
+	    this.disableMouseAnimations = true;
+
             $(this.el).find('div[class~=spread]').each(function(index) {
                 var left = $(this).offset().left * -1 + (($(window).width() / that.collection.photos.length)  * index);
                 $(this).stop().animate({ left: left + 'px' }, 500)
                     .animate({ marginTop: '0px' })
                     .find('img').stop().animate({ rotate: Math.floor(Math.random() * 41) - 20 + 'deg' }, 500, function() {
-                        that.disableMouseAnimations = false;
+                        this.disableMouseAnimations = false;
                     });
 
                 $(this).removeClass("spread");
