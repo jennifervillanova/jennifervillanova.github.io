@@ -6,15 +6,15 @@
 }
 
 body {
-    background-image: url('pattern.png'),url('fundo.jpg');
-	background-color: transparent;
-    background-repeat: repeat, no-repeat;
-    background-position: bottom center;
+    background-image: url('logo.jpg');    
+    background-color: transparent;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center;
     background-attachment: fixed;
-    -webkit-background-size: auto, cover;
-    -moz-background-size: auto, cover;
-    -o-background-size: auto, cover;
-    background-size: auto, cover;
+    -webkit-background-size: 25%;
+    -moz-background-size: 25%;
+    -o-background-size: 25%;
+    background-size: 25%;
 	font-family: 'Josefin Slab', Arial, sans-serif;
 }
 
@@ -24,13 +24,15 @@ img {
 
 .header{
     padding-left: 20px;
+    margin-left:20px;
+    margin-right:20px;
     margin-top: 15px;
     margin-bottom: 30px;
 	font-family:'Arial Narrow', Arial, sans-serif;
-	line-height: 24px;
-	font-size: 11px;
-	background: #000;
-    color: #ddd;
+	line-height: 60px;
+	font-size: 14px;
+	background: #5C8A5A;
+    color: #fff;
 	opacity: 0.9;
 	text-transform: uppercase;
 	z-index: 9999;
@@ -108,14 +110,14 @@ h1 span{
     z-index: 10;
     position: absolute;
     bottom: 0px;
-    background: rgba(0, 0, 0, 0.8);
+    background: #5C8A5A;
     text-align: center;
     padding: 5px;
     cursor: pointer;
     width: 160px;
     color: #fff;
     cursor: pointer;
-    text-shadow: 0px 0px 5px #000;
+    font-weight: bold;
     -moz-box-shadow: 1px 1px 10px #000;
     -webkit-box-shadow: 1px 1px 10px #000;
     box-shadow: 1px 1px 10px #000;
