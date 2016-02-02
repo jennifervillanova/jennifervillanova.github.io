@@ -3,6 +3,23 @@ var PhotoCollectionView = Backbone.View.extend({
 
     loaded: 0,
     disableMouseAnimations: false,
+    currentPhotoIndex: 0,
+
+    keys: {
+      'left right up down': function(e, name) {
+          if (name == "right") {
+            this.currentPhotoIndex++;
+            if (this.currentPhoto) this.currentPhoto.hide(); // Hide the other
+            this.currentPhoto = new PhotoView($($(this.el).find("div[class~=spread]").get(this.currentPhotoIndex)).find('img').data('photo'));
+            this.currentPhoto.show();
+          } else if (name == "left") {
+            this.currentPhotoIndex--;
+            if (this.currentPhoto) this.currentPhoto.hide(); // Hide the other
+            this.currentPhoto = new PhotoView($($(this.el).find("div[class~=spread]").get(this.currentPhotoIndex)).find('img').data('photo'));
+            this.currentPhoto.show();
+          }
+      }
+    },
 
     events: {
         // Slide up the photo collection container
@@ -52,6 +69,7 @@ var PhotoCollectionView = Backbone.View.extend({
             if (this.currentPhoto) this.currentPhoto.hide(); // Hide the other
             this.currentPhoto = new PhotoView($(e.currentTarget).find('img').data('photo'));
             this.currentPhoto.show();
+            this.currentPhotoIndex = $(this.el).find(e.currentTarget).index() - 1;
         }
     },
 
@@ -82,6 +100,7 @@ var PhotoCollectionView = Backbone.View.extend({
 
             $('#back-button').stop().animate({ left: '-150px'}, 300);
 
+      this.delegateKeys();
 	    this.disableMouseAnimations = true;
 
             $(this.el).find('div[class~=spread]').each(function(index) {
@@ -128,6 +147,8 @@ var PhotoCollectionView = Backbone.View.extend({
     },
 
     hide: function() {
+        this.undelegateKeys();
+        this.currentPhotoIndex = 0;
         $(this.el).animate({ marginTop: '90px' }, 500);
     }
 });
